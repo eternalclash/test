@@ -1,0 +1,104 @@
+.middle-component {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+  min-height: 50rem;
+}
+.aside {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8125rem;
+}
+.asideTitle {
+  font-size: 1.375rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.625rem;
+  color: #008485;
+  border-bottom: 0.1875rem solid #008485;
+}
+.asideContentList {
+  margin: 0rem;
+  padding: 0rem;
+}
+.asideContent {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #191f29;
+  border-bottom: 0.0313rem #d1d6db solid;
+}
+.asideCommunityBoard {
+  color: #008485;
+}
+.postingComponent {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4.375rem;
+}
+.postingSubject {
+  padding-bottom: 2.5rem;
+  font-size: 2.375rem;
+  font-weight: bold;
+  color: #191f29;
+}
+.postingInputTop {
+  width: 100%;
+  height: 1.875rem;
+  display: flex;
+  justify-content: space-between;
+}
+.postingInputTitle {
+  width: 73%;
+}
+.postingInputName {
+  width: 25%;
+}
+.postingInputContext {
+  width: 100%;
+  height: 400px;
+  margin-top: 1.25rem;
+}
+.detailButtonBox {
+  display: flex;
+  justify-content: center;
+  padding-top: 3.125rem;
+  padding-bottom: 4.375rem;
+}
+.detailButtons {
+  width: 18.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+.backToList {
+  display: flex;
+  justify-content: center;
+}
+.backToListButton {
+  width: 7rem;
+  height: 2.8125rem;
+  color: #d70035;
+  background-color: #ffffff;
+  border: #d70035 0.0625rem solid;
+  cursor: pointer;
+}
+.backToList:hover {
+  color: #d70035;
+}
+.posting {
+  display: flex;
+  justify-content: center;
+}
+.postingButton {
+  width: 7rem;
+  height: 2.8125rem;
+  color: #008485;
+  background-color: #ffffff;
+  border: #008485 0.0625rem solid;
+  cursor: pointer;
+}

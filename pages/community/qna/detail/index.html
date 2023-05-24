@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/base-styles.css" />
+    <link rel="stylesheet" href="/components/header/header.css" />
+    <link rel="stylesheet" href="/components/footer/footer.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="index.js"></script>
+    <script type="module" src="/components/component.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="inner header-component" id="header"></header>
+
+    <main class="inner">
+      <div class="middle-component">
+        <div class="aside">
+          <div class="asideTitle">커뮤니티</div>
+          <ul class="asideContentList">
+            <li class="asideContent">
+              <a class="asideMenu" href="../../notice/index.html">
+                <p class="asideCommunityNotice">공지사항</p>
+              </a>
+            </li>
+            <li class="asideContent">
+              <a class="asideMenu" href="../../board/index.html">
+                <p class="asideCommunityBoard">자유게시판</p>
+              </a>
+            </li>
+            <li class="asideContent">
+              <a class="asideMenu" href="../../qna/index.html">
+                <p class="asideCommunityQna">QnA</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="detailComponent">
+          <div class="detailSubject">QnA</div>
+          <div class="editButtons">
+            <img class="modifyBtn" src="/public/images/pencil.svg" alt="수정" />
+            <img class="deleteBtn" src="/public/images/trash.svg" alt="삭제" />
+          </div>
+          <div class="detailContentTop">
+            <div class="detailTitle">내일배움카드 안내</div>
+            <div class="detailInformation">
+              <p class="detailWriter">이상준</p>
+              <p class="detailDate">2023-04-27</p>
+            </div>
+          </div>
+          <div class="detailContext"></div>
+          <div class="detailCommentComponent">
+            <div class="detailCommentInput">
+              <input
+                class="detailCommentInputWriter"
+                type="text"
+                placeholder="이름"
+              />
+              <input
+                class="detailCommentInputContext"
+                type="text"
+                placeholder="댓글 내용"
+              />
+              <button class="submitCommentBtn">등록</button>
+            </div>
+            <div class="detailCommentList"></div>
+          </div>
+          <div class="detailButtonBox">
+            <a class="backToList" href="../index.html">
+              <button class="backToListButton" onclick="index.html">
+                목록
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="inner footer-component" id="footer"></footer>
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+    <script type="modules" src="/scripts/apikey.js"></script>
+    <script defer type="module" src="/scripts/kakaoLogin.js"></script>
+  </body>
+</html>

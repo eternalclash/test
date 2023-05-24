@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/base-styles.css" />
+    <link rel="stylesheet" href="/components/header/header.css" />
+    <link rel="stylesheet" href="/components/footer/footer.css" />
+    <script type="module" src="/components/component.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>교육 과정</title>
+    <style></style>
+  </head>
+  <body>
+    <header class="inner header-component" id="header"></header>
+    
+    <main class="inner">
+      <div class="container">
+        <div class="aside">
+          <div class="asideTitle">교육</div>
+          <ul class="asideContentList">
+            <li class="asideContent">
+              <a class="asideMenu" href="../calendar/">
+                <p class="aside-curriculum">교육 과정</p>
+              </a>
+            </li>
+            <li class="asideContent">
+              <a class="asideMenu" href="../lecturer/index.html">
+                <p class="aside-lecturer">강사 소개</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-container">
+          <header>
+            <div class="calendar-head"><span class="calendar-text">교육 과정</span></div>
+          </header>
+          <div class="calendar-container">
+            <div class="calendar1">
+              <div class="calendar-month">
+                <button class="previous" onclick="prevCalendar()"><</button>
+                <div id="month">mm월</div>
+                <button class="next" onclick="nextCalendar()">></button>
+              </div>
+              <div class="calendar-day">
+                <table id="calendar">
+                  <tr class="day-week">
+                    <th class="day-week">일</th>
+                    <th class="day-week">월</th>
+                    <th class="day-week">화</th>
+                    <th class="day-week">수</th>
+                    <th class="day-week">목</th>
+                    <th class="day-week">금</th>
+                    <th class="day-week">토</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="calendar2">
+              <div class="calendar2-row1">
+                <div id="monthly-schedule">
+                  <p id="summaryMonth">mm월 주요 활동</p>
+                  <ul></ul>
+                </div>
+                <div id="special-time"><p>시간 특이사항</p>
+                  <ul></ul>
+                </div>
+              </div>
+              <div class="calendar2-row2">
+                <div id="special-lecture"><p>특강</p>
+                  <ul></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+    <script src="./index.js"></script>
+
+    <footer class="inner footer-component" id="footer"></footer>
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script type="modules" src="/scripts/apikey.js"></script>
+    <script defer type="module" src="/scripts/kakaoLogin.js"></script>
+  </body>
+</html>
