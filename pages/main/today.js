@@ -1,3 +1,4 @@
+// const specialResponse = await fetch('./data/info.json');
 const today = new Date(Date.now())
   .toLocaleDateString()
   .split('.')

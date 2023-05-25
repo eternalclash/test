@@ -1,4 +1,4 @@
-import { getLocalStorageItems,displayPage, displayPagination } from '../community.js';
+import { getPosts, displayPage, displayPagination } from '../community.js';
 
 function markDowntoPlainWords(message) {
   return message.replace(/&gt;|:[a-zA-Z0-9_]+:|[\*_`~]/g, '');
@@ -17,6 +17,7 @@ function getSlackNotice() {
       throw new Error('Error: ' + response.status);
     })
     .then(data => {
+      console.log(data)
       data = data.map((e, idx) => {
         e.title = markDowntoPlainWords(e.title);
         e.content = e.content.map(e => markDowntoPlainWords(e));
@@ -33,7 +34,6 @@ function getSlackNotice() {
 }
 
 getSlackNotice();
-
 let postType = 'notice';
 
 let currentPage = 1;
@@ -41,7 +41,8 @@ let currentPage = 1;
 let boardList = document.querySelector('.boardList');
 let pagination = document.querySelector('.boardPage');
 
-let posts = getLocalStorageItems(postType);
+let posts = getPosts(postType);
 
 displayPage(posts, currentPage, boardList);
 displayPagination(posts, currentPage, pagination, boardList);
+

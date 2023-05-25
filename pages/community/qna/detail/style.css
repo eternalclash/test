@@ -5,17 +5,16 @@
   min-height: 50rem;
 }
 .aside {
-  width: 20%;
+  width: 16.25rem;
   display: flex;
   flex-direction: column;
-  margin-top: 0.8125rem;
 }
 .asideTitle {
-  font-size: 1.375rem;
+  font-size: 1.75rem;
   font-weight: bold;
   display: flex;
   align-items: center;
-  padding-bottom: 0.625rem;
+  padding-bottom: 1rem;
   color: #008485;
   border-bottom: 0.1875rem solid #008485;
 }
@@ -23,8 +22,10 @@
   margin: 0rem;
   padding: 0rem;
 }
-.asideContent {
+.asideMenu {
   width: 100%;
+}
+.asideContent {
   height: 3rem;
   display: flex;
   align-items: center;
@@ -36,29 +37,16 @@
   color: #008485;
 }
 .detailComponent {
-  width: 80%;
+  width: 39.375rem;
   display: flex;
   flex-direction: column;
   margin-left: 4.375rem;
 }
 .detailSubject {
-  padding-bottom: 0.3125rem;
+  padding-bottom: 2.5rem;
   font-size: 2.375rem;
   font-weight: bold;
   color: #191f29;
-}
-.editButtons {
-  display: flex;
-  justify-content: end;
-}
-.editButtons > img {
-  height: 25px;
-  margin: 5px;
-  opacity: 40%;
-}
-.editButtons > img:hover {
-  cursor: pointer;
-  opacity: 90%;
 }
 .detailContentTop {
   display: flex;
@@ -102,39 +90,34 @@
 .detailCommentInputContext {
   width: 70%;
 }
-.submitCommentBtn {
+.detailCommentSubmit {
   width: 10%;
   color: #fff;
   background-color: #008485;
   border: #008485 0.0625rem solid;
   cursor: pointer;
 }
-.submitCommentBtn:hover {
+.detailCommentSubmit:hover {
   opacity: 90%;
 }
 .detailComment {
   display: flex;
   padding: 0.3125rem 0px;
   justify-content: space-evenly;
-  align-items: center;
 }
 .detailComment > p {
   margin: 0px;
 }
 .detailCommentWriter {
-  width: 15%;
+  width: 16%;
   display: flex;
   justify-content: center;
 }
 .detailCommentContext {
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: start;
   margin-left: 0.625rem;
-}
-.deleteCommentBtn {
-  width: 15px;
-  margin: 0px 12px;
 }
 .detailButtonBox {
   display: flex;
