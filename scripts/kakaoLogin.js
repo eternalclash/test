@@ -1,6 +1,6 @@
 import { config } from './apikey.js';
 
-window.Kakao.init(config.apikey);
+window.Kakao.init(config.apikey||'70ea0bfda7dfa09b98fb24b01114d26f');
 
 export const kakaoLoginInit = () => {
   const loginBtn = document.querySelector('#login');
