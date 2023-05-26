@@ -85,7 +85,6 @@
     width: 14.5rem;
     height: 16.5rem;
     border-radius: 0.3125rem;
-    background: #d9d9d9;
   }
   .middle-bottom {
     width: 36.25rem;
@@ -441,62 +440,72 @@
     height: 100%;
     flex: 0 0 100%;
     display: flex;
-    justify-content: space-between;
-
+    align-items: center;
+    justify-content: center;
+   
+    
+  }
+  
+  .bg-carousel1{
+    background-image:url('../../public/images/캐러셀1.jpg');
+    background-size: cover;
+    background-position: center;
+    filter:brightness(70%);
+    z-index:-1;
+  }
+  .bg-carousel2{
+    background-image:url('../../public/images/캐러셀2.jpg');
+    background-size: cover;
+    filter:brightness(70%);
+  }
+  .bg-carousel3{
+    background-image:url('../../public/images/캐러셀3.jpg');
+    background-size: cover;
+    filter:brightness(70%);
+  }
+  .bg-carousel4{
+    background-image:url('../../public/images/캐러셀4.jpg');
+    background-size: cover;
+    background-position: center;
+    filter:brightness(70%);
     
   }
 
-  .bg-carousel1{
-    background-image:url('../../public/images/캐러셀1.png');
-    background-size: cover;
-    background-position: center;
-  }
-  .bg-carousel2{
-    background-image:url('../../public/images/캐러셀2.png');
-    background-size: cover;
-    background-position: center;
-  }
-  .bg-carousel3{
-    background-image:url('../../public/images/캐러셀3.png');
-    background-size: cover;
-    background-position: center;
-  }
-  .bg-carousel4{
-    background-image:url('../../public/images/캐러셀4.png');
-    background-size: cover;
-    background-position: center;
-  }
-
   .mainCarouselText {
-    margin-top: 4rem;
-    margin-left: 2rem;
     width: 20rem;
     height: 12.5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    padding-bottom: 0.625rem;
     font-size: 0.5rem;
+    filter:brightness(1);
+
+   
   }
 
   .mainCarouselText > :first-child {
-    width: 90%;
+    width: 100%;
     height: 2.5625rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
     font-weight: bold;
     color:pink;
   }
   .extraText {
-    width: 70%;
+    width: 100%;
     height: 3.5625rem;
-    font-size: 2.2rem;
+    font-size: 3rem;
+    text-align: center;
     color: #008485;
     font-weight: bold;
   }
   .mainCarouselText > :last-child {
-    width: 90%;
+    margin-top:3vh;
+    width: 100%;
     height: 1.4375rem;
-    font-size: 0.8rem;
+    font-size: 2rem;
+    text-align: center;
     font-weight: bold;
     color:white;
   }
@@ -515,29 +524,32 @@
     align-items: center;
   }
   .middle-right {
+    margin-top:5vh;
     width: 100vw;
-    height: 12rem;
+    height: 45vh;
     display: flex;
+    
   }
   .todayTable {
-    width: 60vw;
-    height: 12rem;
+    width: 100%;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border-bottom: 1px solid #008485;
+
   }
   .todayTableTitle {
-    width: 8rem;
-    height: 1rem;
+    font-weight: bold;
+    width: 14rem;
+    font-size: 2.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .todayTableContent {
-    width: 9rem;
-    height: 9rem;
+    width: 15rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -545,21 +557,13 @@
     background: #ecf0f1;
   }
   .todayTableContent > div {
-    font-size: 0.8125rem;
-    height: 1.5rem;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     text-align: center;
   }
   .whatShouldIEatButton {
-    width: 40vw;
-    height: 12rem;
-    background-color: #008485;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    display:none;
   }
   
   .whatShouldIEatButton > span {

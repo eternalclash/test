@@ -11,16 +11,8 @@
     <link rel="stylesheet" href="introduce.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="module" defer src="./chatbot/chatbotData.js"></script>
-    <script type="module" defer src="./chatbot/Store.js"></script>
-    <script type="module" defer src="./chatbot/chatbotFunctions.js"></script>
-    <script type="module" defer src="./chatbot/chatbot.js"></script>
-    <script type="module" src="/components/component.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>디지털 하나로 메인 페이지</title>
-    <script async src="slackApi.js"></script>
-    <script src="board.js" type="module"></script>
-   
   </head>
   <body>
     <header class="inner header-component" id="header"></header>
@@ -31,11 +23,14 @@
             <div class="carousel-items">
               <div class="carousel-item bg-carousel1">
                 <div class="mainCarouselText">
-                  <div>금융개발자ING</div>
+                  <div>밝은 미래를 위해</div>
                   <div class="extraText">디지털 하나로</div>
-                  <div>#금융 #개발 #풀스택개발자</div>
+                  <div>#청춘 #미래 #행복</div>
                 </div>
-                <img class="mainCarouselImage" src="../../public/images/캐러셀1.png"></img>
+                <img
+                  class="mainCarouselImage"
+                  src="/public/images/캐러셀1.jpg"
+                />
               </div>
 
               <div class="carousel-item bg-carousel2">
@@ -44,27 +39,36 @@
                   <div class="extraText">디지털 하나로</div>
                   <div>#청춘 #미래 #행복</div>
                 </div>
-                <img class="mainCarouselImage" src="../../public/images/캐러셀2.png"></img>
+                <img
+                  class="mainCarouselImage"
+                  src="/public/images/캐러셀2.jpg"
+                />
                 <!-- 두 번째 슬라이드 내용 -->
               </div>
 
               <div class="carousel-item bg-carousel3">
                 <div class="mainCarouselText">
-                  <div>하나의 팀이 되는</div>
+                  <div>밝은 미래를 위해</div>
                   <div class="extraText">디지털 하나로</div>
-                  <div>#원팀 #좋은동료 </div>
+                  <div>#청춘 #미래 #행복</div>
                 </div>
-                <img class="mainCarouselImage" src="../../public/images/캐러셀3.png"></img>
+                <img
+                  class="mainCarouselImage"
+                  src="/public/images/캐러셀3.jpg"
+                />
                 <!-- 세 번째 슬라이드 내용 -->
               </div>
 
               <div class="carousel-item bg-carousel4">
                 <div class="mainCarouselText">
-                  <div>우리 모두 같이</div>
-                  <div class="extraText">디지털 하나로~</div>
-                  <div>#열공 #화이팅 #워라밸</div>
+                  <div>밝은 미래를 위해</div>
+                  <div class="extraText">디지털 하나로</div>
+                  <div>#청춘 #미래 #행복</div>
                 </div>
-                <img class="mainCarouselImage" src="../../public/images/캐러셀4.png"></img>
+                <img
+                  class="mainCarouselImage"
+                  src="/public/images/캐러셀4.jpg"
+                />
                 <!-- 네 번째 슬라이드 내용 -->
               </div>
               <!-- 추가 슬라이드 아이템들 -->
@@ -85,9 +89,7 @@
         <div class="middle-right">
           <div class="todayTable">
             <div class="todayTableTitle">오늘 시간표</div>
-            <div class="todayTableContent">
-
-            </div>
+            <div class="todayTableContent"></div>
           </div>
           <a href="./lunch/index.html">
             <div class="whatShouldIEatButton" onclick="index.html">
@@ -131,7 +133,6 @@
             <a href="../community/notice" class="mainBottomNoticeLearnButton"
               >+더보기</a
             >
-          
           </div>
           <div class="mainBottomNoticeBottom">
             <div class="">
@@ -159,7 +160,9 @@
         <div class="mainBottomBoard">
           <div class="mainBottomBoardTop">
             <div class="mainBottomBoardText">자유게시판</div>
-            <a href="../community/board" class="mainBottomBoardLearnButton">+더보기</a>
+            <a href="../community/board" class="mainBottomBoardLearnButton"
+              >+더보기</a
+            >
           </div>
           <div class="mainBottomBoardBottom"></div>
         </div>
@@ -171,6 +174,7 @@
           data-aos-once="false"
           data-aos-offset="100"
           data-aos-duration="1800"
+          class="introHeader"
         >
           <h2 class="blind">디지털 하나로 소개</h2>
           <p class="introHeading">디지털 하나로 소개</p>
@@ -185,11 +189,11 @@
           >
             <div class="cardContainer">
               <h3 class="blind">은행권 최초 K-Digital 프로그램</h3>
-              <p class="introCardHeader">은행권 최초 K-Digital 프로그램</p>
-              <p class="cardContent">
+              <div class="introCardHeader">은행권 최초 K-Digital 프로그램</div>
+              <div class="cardContent">
                 디지털 금융으로의 바람에 힘입어 하나 금융 그룹이 은행권 최초로
                 K-Digital 프로그램을 시작했습니다. 금융 개발자 양성을 위해 힘쓰겠습니다.
-              </p>
+              </div>
             </div>
           </div>
           <div
@@ -201,13 +205,13 @@
           >
             <div class="cardContainer">
               <h3 class="blind">하나금융그룹 채용 특전</h3>
-              <p class="introCardHeader">하나금융그룹 채용 특전</p>
-              <p class="cardContent">
+              <div class="introCardHeader">하나금융그룹 채용 특전</div>
+              <div class="cardContent">
                 "디지털 금융"의 중심 하나은행이 되기 위해 특별히 준비한
                 교육프로그램으로 하나금융그룹 채용 과정에 특전을 제공합니다.
                 우수 수료생의 서류전형 면제, 취우수 수료생의 필기, 코딩테스트
                 면제의 혜택을 누릴수있습니다.
-              </p>
+              </div>
             </div>
           </div>
           <div
@@ -219,13 +223,13 @@
           >
             <div class="cardContainer">
               <h3 class="blind">함께 성장하는 교육 과정</h3>
-              <p class="introCardHeader">함께 성장하는 교육 과정</p>
-              <p class="cardContent">
+              <div class="introCardHeader">함께 성장하는 교육 과정</div>
+              <div class="cardContent">
                 4건의 팀별 과제를 통한 협업 위주의 교육
                 <br />
                 2건의 하나금융 그룹 고객을 위한 실무 프로젝트를 통해 협업경험과
                 프로젝트 경험, 포트폴리오를 만들어 낼 수 있습니다.
-              </p>
+              </div>
             </div>
           </div>
           <div
@@ -237,12 +241,12 @@
           >
             <div class="cardContainer">
               <h3 class="blind">수강생들을 위한 커뮤니티 형성</h3>
-              <p class="introCardHeader">수강생들을 위한 커뮤니티 형성</p>
-              <p class="cardContent">
+              <div class="introCardHeader">수강생들을 위한 커뮤니티 형성</div>
+              <div class="cardContent">
                 협업을 통한 실무 경험을 위해 커뮤니티 페이지 또한 준비했습니다.
                 공지사항, 자유게시판 등의 커뮤니티 페이지를 통해 더욱 향상된
                 교육경험을 가능하도록 해줍니다.
-              </p>
+              </div>
             </div>
           </div>
         </article>
@@ -531,7 +535,13 @@
     </main>
 
     <section class="chatbotWrapper">
-      <div class="chatbotButton">🫡</div>
+      <div class="chatbotButton">
+        <img
+          class="chatbotButtonImage"
+          src="https://haitalk.kebhana.com/aicc/soe/service/storage/49e50558-09e8-47f2-b567-93b2a41099fc"
+          alt=""
+        />
+      </div>
     </section>
 
     <div class="modalBackground hidden"></div>
@@ -546,13 +556,22 @@
     </section>
 
     <footer class="inner footer-component" id="footer"></footer>
-    <script src="today.js"> </script>
-    <script src="index.js"></script>
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script type="modules" src="/scripts/apikey.js"></script>
+
+    <script defer src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script defer type="modules" src="/scripts/apikey.js"></script>
     <script defer type="module" src="/scripts/kakaoLogin.js"></script>
     <script>
       AOS.init();
     </script>
+
+    <script defer type="module" src="/components/component.js"></script>
+    <script defer src="slackApi.js"></script>
+    <script defer src="board.js" type="module"></script>
+    <script defer type="module" src="./chatbot/Store.js"></script>
+    <script defer type="module" src="./chatbot/chatbotData.js"></script>
+    <script defer type="module" src="./chatbot/chatbotFunctions.js"></script>
+    <script defer type="module" src="./chatbot/chatbot.js"></script>
+    <script defer src="today.js"></script>
+    <script defer src="index.js"></script>
   </body>
 </html>
