@@ -142,3 +142,6 @@ Webpack/*
 
 .vscode
 No newline at end of file
+
+# Local Netlify folder
+.netlify
