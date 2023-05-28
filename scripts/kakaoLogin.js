@@ -1,9 +1,6 @@
 import { config } from './apikey.js';
 
 window.Kakao.init(config.apikey);
-fetch('/.netlify/functions/api')
-    .then(response => response.json())
-    .then(data => console.log(data));
 
 export const kakaoLoginInit = () => {
   const loginBtn = document.querySelector('#login');
@@ -34,6 +31,7 @@ export const kakaoLoginInit = () => {
                 kakao_account.profile.nickname
               );
               window.sessionStorage.setItem('userMail', kakao_account.email);
+              location.reload();
             },
             fail: res => {
               console.error(res);
@@ -51,6 +49,7 @@ export const kakaoLoginInit = () => {
           window.sessionStorage.setItem('userMail', '');
           loginBtn.innerText = '로그인';
           alert('logout ok\naccess token -> ' + Kakao.Auth.getAccessToken());
+          location.reload();
         });
       }
     }
@@ -72,6 +71,7 @@ export const kakaoLoginInit = () => {
                 kakao_account.profile.nickname
               );
               window.sessionStorage.setItem('userMail', kakao_account.email);
+              location.reload();
             },
             fail: res => {
               console.error(res);
@@ -89,6 +89,7 @@ export const kakaoLoginInit = () => {
           window.sessionStorage.setItem('userMail', '');
           loginBtnMobile.innerText = '로그인';
           alert('logout ok\naccess token -> ' + Kakao.Auth.getAccessToken());
+          location.reload();
         });
       }
     }
