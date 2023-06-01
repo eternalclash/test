@@ -1,2 +1,5 @@
-# hana-five
-디지털 하나로 수강생을 위한 커뮤니티 사이트입니다.
+# hana-five-slackapi
+
+1. git clone 레퍼지토리
+2. command에 npm install
+3. node app.js 실행
