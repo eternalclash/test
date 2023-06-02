@@ -45,7 +45,7 @@ async function sendMessageToChannel(channel, text) {
       text: text,
     });
 
-    console.log('메시지 전송됨:', result);
+    console.log('신호보냈냐');
   } catch (error) {
     console.error('메시지 전송 중 오류 발생:', error);
   }
