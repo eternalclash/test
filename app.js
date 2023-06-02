@@ -2,6 +2,7 @@ require('dotenv').config();
 const { App } = require('@slack/bolt');
 const http = require('http');
 const app_server =require('express')
+const { WebClient } = require('@slack/web-api');
 const socket_server = new App({
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
@@ -12,10 +13,6 @@ const socket_server = new App({
 function sendDataToClient(data) {
   io.emit('chat', data);
 }
-
-socket_server.message('hello', async ({ message, say }) => {
-  await say(`Hey there <@${message.user}>!`);
-});
 
 const http_server = http.createServer();
 const io = require('socket.io')(http_server, {
@@ -28,7 +25,10 @@ const io = require('socket.io')(http_server, {
 
 io.on('connection', async socket => {
   console.log('Client connected');
-
+  socket.on('sendMessage', async ({ channel, text }) => {
+    // sendMessageToChannel 함수 호출 시 제공된 채널과 텍스트 사용
+    await sendMessageToChannel(channel, text);
+  });
   // 채널의 메시지 가져오기
   const channelId = process.env.SOCKET_CHANNEL; // 실제 채널 ID로 대체해야 합니다.
   await fetchChannelHistory(channelId);
@@ -37,7 +37,19 @@ io.on('connection', async socket => {
     console.log('Client disconnected');
   });
 });
+const slackClient = new WebClient(process.env.SLACK_BOT_TOKEN);
+async function sendMessageToChannel(channel, text) {
+  try {
+    const result = await slackClient.chat.postMessage({
+      channel: channel,
+      text: text,
+    });
 
+    console.log('메시지 전송됨:', result);
+  } catch (error) {
+    console.error('메시지 전송 중 오류 발생:', error);
+  }
+}
 async function fetchChannelHistory(channelId) {
   let data = [];
   try {
@@ -63,6 +75,7 @@ async function fetchChannelHistory(channelId) {
 // Slack 앱에서 `message.channels` 이벤트 구독
 socket_server.event('message', async ({ event, client }) => {
   const channelId = event.channel;
+  console.log(channelId)
   await fetchChannelHistory(channelId);
 });
 
