@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { App } = require('@slack/bolt');
 const http = require('http');
-
+const app_server =require('express')
 const socket_server = new App({
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
@@ -17,8 +17,9 @@ socket_server.message('hello', async ({ message, say }) => {
   await say(`Hey there <@${message.user}>!`);
 });
 
-const server = http.createServer();
-const io = require('socket.io')(server, {
+const http_server = http.createServer();
+const io = require('socket.io')(http_server, {
+  perMessageDeflate :false,
   cors: {
     origin: '*',
     methods: ['GET', 'POST'],
@@ -68,7 +69,7 @@ socket_server.event('message', async ({ event, client }) => {
 (async () => {
   await socket_server.start(process.env.PORT || 3000);
   console.log('⚡️ Bolt app is running!');
-  server.listen(4000, () => {
+  http_server.listen(8080, () => {
     console.log('WebSocket server is running!');
   });
 })();
