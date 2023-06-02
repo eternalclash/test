@@ -75,7 +75,7 @@ async function fetchChannelHistory(channelId) {
 // Slack 앱에서 `message.channels` 이벤트 구독
 socket_server.event('message', async ({ event, client }) => {
   const channelId = event.channel;
-  console.log(channelId)
+  console.log("신호갔냐")
   await fetchChannelHistory(channelId);
 });
 
